@@ -2,6 +2,14 @@
 
 <template>
   <router-view />
+  <p class="ab">111</p>
 </template>
 
-<style scoped></style>
+<style lang="less" scoped>
+// @import url(./styles/commons.less);
+
+.ab {
+  color: @primary-color;
+  font-size: @size-12;
+}
+</style>

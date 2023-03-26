@@ -40,3 +40,31 @@ pnpm install axios --save
 ```
 pnpm install vue-axios --save
 ```
+
+### vite 中引入全局 less 变量的方式
+
+```
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import path from 'path'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        additionalData: `@import "${path.resolve(__dirname, './src/styles/commons.less')}";`
+      }
+    }
+  }
+})
+```
+
+可能遇到的问题：在引入 path 时报错。
+解决办法，根据提示安装@tyoe/node
+
+```
+pnpm install @type/node --save
+```
