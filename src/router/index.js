@@ -3,8 +3,15 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'index',
-    component: () => import(/* webpackChunkName: "HyyIndedx" */ '../views/HyyIndex.vue')
+    redirect: '/wall?id=0',
+    name: 'Index',
+    component: () => import(/* webpackChunkName: "index" */ '@/views/HyyIndex.vue'),
+    children: [
+      {
+        path: '/wall',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/WallMessage.vue')
+      }
+    ]
   }
 ]
 
