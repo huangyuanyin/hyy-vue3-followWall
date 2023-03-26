@@ -1,5 +1,5 @@
 <template>
-  <div>111</div>
+  <span class="iconfont icon-tianjia"></span>
 </template>
 
 <script lang="ts" setup>
@@ -15,4 +15,4 @@ const getUser = () => {
 getUser()
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped></style>

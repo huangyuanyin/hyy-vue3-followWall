@@ -68,3 +68,7 @@ export default defineConfig({
 ```
 pnpm install @type/node --save
 ```
+
+### 引入 iconfont 字体图标
+
+[iconfont](https://www.iconfont.cn/)
